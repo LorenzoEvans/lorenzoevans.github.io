@@ -215,6 +215,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: any
 } & { render(): Render[".md"] };
+"tapehead.md": {
+	id: "tapehead.md";
+  slug: "tapehead";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
 };
 
 	};
