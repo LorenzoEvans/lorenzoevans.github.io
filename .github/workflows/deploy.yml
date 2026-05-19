@@ -2,7 +2,7 @@ name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Change this if your default branch is named 'master'
+    branches: [ main ] # Change to 'master' if that's your default branch name
   workflow_dispatch:
 
 permissions:
@@ -14,14 +14,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
-        # Optional settings if you use yarn/pnpm instead of npm:
-        # with:
-        #   package-manager: pnpm
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' # Change to 'pnpm' or 'yarn' if you use those instead
+
+      - name: Install dependencies
+        run: npm ci # Use 'npm install' if you don't have a package-lock.json yet
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3 # Updated version compatible with modern GitHub rules
+        with:
+          path: ./dist # Astro outputs production builds to the 'dist' folder by default
 
   deploy:
     needs: build
@@ -32,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Modern deployment action
