@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+// Sort by pubDate descending
+projects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout title="Projects | Personal Portfolio">
+	<main>
+		<h1>My Projects</h1>
+		<div class="projects-grid">
+			{projects.map(project => (
+				<a href={`/projects/${project.slug}`} class="card-link">
+					<BlogCard
+						title={project.data.title}
+						description={project.data.description}
+						image={project.data.image}
+					/>
+				</a>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 2rem;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		color: var(--text-primary);
+	}
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+	}
+	.card-link {
+		text-decoration: none;
+	}
+	@media (max-width: 1200px) {
+		.projects-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	@media (max-width: 900px) {
+		.projects-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 600px) {
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

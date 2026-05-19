@@ -5,30 +5,32 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  const tags = [...new Set(posts.flatMap(post => post.data.tags))];
+  const projects = await getCollection('projects');
+  const allContent = [...posts, ...projects];
+  const tags = [...new Set(allContent.flatMap(item => item.data.tags))];
   
   return tags.map(tag => ({
     params: { tag },
     props: { 
-      posts: posts.filter(post => post.data.tags.includes(tag)),
+      items: allContent.filter(item => item.data.tags.includes(tag)),
       tag 
     },
   }));
 }
 
-const { posts, tag } = Astro.props;
+const { items, tag } = Astro.props;
 ---
 
-<Layout title={`Posts tagged with "${tag}" - Eco Blog`}>
+<Layout title={`Content tagged with "${tag}" - Eco Blog`}>
 	<main>
-		<h1>Posts tagged with "{tag}"</h1>
+		<h1>Content tagged with "{tag}"</h1>
 		<div class="blog-grid">
-			{posts.map(post => (
-				<a href={`/${post.slug}`} class="card-link">
+			{items.map(item => (
+				<a href={item.collection === 'projects' ? `/projects/${item.slug}` : `/${item.slug}`} class="card-link">
 					<BlogCard
-						title={post.data.title}
-						description={post.data.description}
-						image={post.data.image}
+						title={item.data.title}
+						description={item.data.description}
+						image={item.data.image}
 					/>
 				</a>
 			))}

@@ -3,9 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
-const tags = [...new Set(posts.flatMap(post => post.data.tags))];
+const projects = await getCollection('projects');
+const allContent = [...posts, ...projects];
+
+const tags = [...new Set(allContent.flatMap(item => item.data.tags))];
 const tagCounts = tags.reduce((acc, tag) => {
-  acc[tag] = posts.filter(post => post.data.tags.includes(tag)).length;
+  acc[tag] = allContent.filter(item => item.data.tags.includes(tag)).length;
   return acc;
 }, {} as Record<string, number>);
 ---
