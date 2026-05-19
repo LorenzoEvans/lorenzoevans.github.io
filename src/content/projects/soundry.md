@@ -1,5 +1,5 @@
 ---
-title: "SFZP"
+title: "Soundry"
 description: "A parser for the SFZ file format."
 image: "/images/energy.jpg"
 pubDate: 2024-03-15
