@@ -1,13 +1,37 @@
 ---
 title: "Petalblade"
-description: " A TUI application for streaming MusicForProgramming mixes."
-image: "/images/energy.jpg"
+description: "A terminal user interface for discovering and streaming ambient music mixes from musicforprogramming.net."
 pubDate: 2024-03-15
-tags: ["Rust", "TUI", "File-Systems", "Audio Programming"]
+image: "/images/audio-processing.jpg"
+tags: ["Rust", "TUI", "Audio Programming", "Async"]
+status: "in-progress"
 ---
 
-Petalblade is a hands-on dive into combining network streaming with terminal developed in Rust as a TUI client for musicforprogramming.net's curated mixes, it enables users to discover, queue, and stream ambient tracks tailored for productive programming flows. This project stems from my broader explorations in audio software, aiming here to explore real-time data and terminal based audio software.
+## Overview
 
-In its current form, Petalblade is a work-in-progress that parses the sites RSS-like feeds to populate a navigable list of episodes, complete with previews of track info and direct streaming initiation. While it handles the essentials of HTTP requests and audio decoding, variations in browser-based versus API access mean it is probably not as efficient as it could be.
+Petalblade is a terminal user interface (TUI) client developed in Rust to browse and stream ambient music mixes from musicforprogramming.net. Designed specifically for developers seeking audio environments optimized for concentration, the application fetches episode data dynamically and decodes audio directly within the terminal buffer. This project stems from a broader exploration into audio software, aiming to merge real-time network streaming with lightweight, terminal-based audio pipelines.
 
-At present, Petalblade manages session queuing and basic playback: starting with these allowed me to experiment with concurrency for non-blocking streams, using Rust's async features to avoid UI freezes. Looking ahead, I'm considering additions such as persisting user favorites via a simple config file, and perhaps the ability to stream audio from local files on disk.
+## Motivation
+
+The project was sparked by an interest in combining network streaming with terminal interfaces while eliminating the overhead or latency of traditional browser-based players. The goal was to build a hands-on, low-latency desktop companion that interacts directly with web feeds. Additionally, it provided a practical sandbox to experiment with concurrent, non-blocking audio pipelines, using asynchronous paradigms to keep the visual terminal interface responsive during heavy background network caching and data decoding.
+
+## Features
+
+- Parses remote RSS feeds from musicforprogramming.net to dynamically build, populate, and display up-to-date track indexes.
+- Provides an interactive, multi-pane layout to cycle focus seamlessly among the main navigation menu, episode listing, documentation texts, and credit sidebars.
+- Manages audio stream lifecycle actions via direct keyboard shortcuts, allowing users to play, pause, resume, or entirely stop mix tracks.
+- Incorporates real-time audio volume scaling directly through key modifiers (`+` / `-`).
+- Displays structural metadata dynamically, updating an integrated status bar with track titles, durations, release dates, and active player configurations.
+
+## Implementation Notes
+
+Petalblade isolates interface operations from heavy network and playback tasks to ensure application stability. The terminal interface leverages `ratatui` alongside `crossterm` for immediate-mode rendering, capturing keyboard inputs via a dedicated event polling thread. 
+
+The core audio pipeline offloads playback tasks to a background thread driving `rodio` sinks. When an episode is selected, `reqwest` pulls audio data asynchronously as a continuous byte stream. A sliding buffer accumulating 1024 x 512 bytes feeds compressed chunks into an active `Cursor` decoder. This decoded stream converts floating-point samples sequentially into the playback engine without stalling the primary TUI loop. While functional, variations between raw API audio streaming and native browser caching mean processing efficiency remains a primary optimization target.
+
+## Roadmap
+
+- Persist user session settings, favorites, and catalog highlights locally using a simple configuration file format.
+- Extend the playback architecture to support streaming audio files discovered directly on local disks.
+- Implement full text-filtering workflows within the interface's built-in search bar widget.
+- Refine background chunk caching and memory footprint strategies to improve decoding efficiency relative to native web audio players.
