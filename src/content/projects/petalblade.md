@@ -9,7 +9,7 @@ status: "in-progress"
 
 ## Overview
 
-Petalblade is a terminal user interface (TUI) client developed in Rust to browse and stream ambient music mixes from musicforprogramming.net. Designed specifically for developers seeking audio environments optimized for concentration, the application fetches episode data dynamically and decodes audio directly within the terminal buffer. This project stems from a broader exploration into audio software, aiming to merge real-time network streaming with lightweight, terminal-based audio pipelines.
+[Petalblade](https://github.com/LorenzoEvans/petalblade) is a terminal user interface (TUI) client developed in Rust to browse and stream ambient music mixes from musicforprogramming.net. Designed specifically for developers seeking audio environments optimized for concentration, the application fetches episode data dynamically and decodes audio directly within the terminal buffer. This project stems from a broader exploration into audio software, aiming to merge real-time network streaming with lightweight, terminal-based audio pipelines.
 
 ## Motivation
 

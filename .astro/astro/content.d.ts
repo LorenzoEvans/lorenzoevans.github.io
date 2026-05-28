@@ -165,13 +165,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"dirac-glory-perseverance.md": {
-	id: "dirac-glory-perseverance.md";
-  slug: "dirac-glory-perseverance";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "head-in-the-clouds.md": {
 	id: "head-in-the-clouds.md";
   slug: "head-in-the-clouds";
