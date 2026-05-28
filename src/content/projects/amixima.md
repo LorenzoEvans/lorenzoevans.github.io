@@ -1,7 +1,7 @@
 ---
 title: "AMIXIMA"
 description: "A TUI for batch audio processing."
-image: "/images/energy.jpg"
+image: "/images/audio-processing.jpg"
 pubDate: 2024-03-15
 tags: ["Rust", "TUI", "Audio Processing"]
 ---

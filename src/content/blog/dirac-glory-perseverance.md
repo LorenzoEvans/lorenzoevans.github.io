@@ -1,9 +1,9 @@
 ---
 title: "On Dirac: Glory from Perseverance"
-description: "Transform your kitchen into a zero-waste zone with these practical tips."
-image: "/images/kitchen.jpg"
+description: "A look at Dirac's journey to a nobel prize."
+image: "/images/dirac.jpeg"
 pubDate: 2024-01-15
-tags: ["kitchen", "zero-waste", "home", "lifestyle"]
+tags: ["Physics", "Quantum Mechanics"]
 ---
 
 ### Paul Adrien Maurice Dirac, was one of the fathers of quantum mechanics, and mathematically, balanced upon a ”dizzying path between genius and madness”.
