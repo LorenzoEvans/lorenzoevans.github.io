@@ -9,7 +9,7 @@ status: "stable"
 
 ## Overview
 
-Filemanager is a lightweight command-line interface utility designed to handle fundamental file system operations without the overhead of graphical environments. Built using Rust, it provides a predictable, zero-boilerplate alternative for common administrative operations like copying, moving, renaming, and auditing files. The tool serves as a practical asset for headless environments and automated scripts that require low-level system interaction.
+[Filemanager](https://github.com/LorenzoEvans/filemanager) is a lightweight command-line interface utility designed to handle fundamental file system operations without the overhead of graphical environments. Built using Rust, it provides a predictable, zero-boilerplate alternative for common administrative operations like copying, moving, renaming, and auditing files. The tool serves as a practical asset for headless environments and automated scripts that require low-level system interaction.
 
 ## Motivation
 
