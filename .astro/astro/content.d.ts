@@ -1,4 +1,14 @@
 declare module 'astro:content' {
+	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
 	interface RenderResult {
 		Content: import('astro/runtime/server/index.js').AstroComponentFactory;
 		headings: import('astro').MarkdownHeading[];
@@ -158,6 +168,13 @@ declare module 'astro:content' {
 "head-in-the-clouds.md": {
 	id: "head-in-the-clouds.md";
   slug: "head-in-the-clouds";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"latex-test.md": {
+	id: "latex-test.md";
+  slug: "latex-test";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
