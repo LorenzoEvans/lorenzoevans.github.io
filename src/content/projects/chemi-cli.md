@@ -9,7 +9,7 @@ status: "in-progress"
 
 ## Overview
 
-ChemiCLI is a command-line utility designed for developers and science enthusiasts who need offline access to data from the periodic table of elements. It parses structural chemical data locally to provide instant property lookups directly from the terminal. The project serves as both a practical utility and an exercise in building reliable, command-based data retrieval tools in Rust.
+[ChemiCLI](https://github.com/LorenzoEvans/chemicli) is a command-line utility designed for developers and science enthusiasts who need offline access to data from the periodic table of elements. It parses structural chemical data locally to provide instant property lookups directly from the terminal. The project serves as both a practical utility and an exercise in building reliable, command-based data retrieval tools in Rust.
 
 ## Motivation
 
