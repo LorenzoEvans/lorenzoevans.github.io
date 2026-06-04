@@ -158,9 +158,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"async-rust.md": {
+	id: "async-rust.md";
+  slug: "async-rust";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "brief-intro-time-physics.md": {
 	id: "brief-intro-time-physics.md";
   slug: "brief-intro-time-physics";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"dirac-glory-perseverance.md": {
+	id: "dirac-glory-perseverance.md";
+  slug: "dirac-glory-perseverance";
   body: string;
   collection: "blog";
   data: any
