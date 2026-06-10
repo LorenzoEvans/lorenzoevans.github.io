@@ -156,42 +156,42 @@ declare module 'astro:content' {
   slug: "abridged-linux";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "async-rust.md": {
 	id: "async-rust.md";
   slug: "async-rust";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "brief-intro-time-physics.md": {
 	id: "brief-intro-time-physics.md";
   slug: "brief-intro-time-physics";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "dirac-glory-perseverance.md": {
 	id: "dirac-glory-perseverance.md";
   slug: "dirac-glory-perseverance";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ferrous-systems.md": {
 	id: "ferrous-systems.md";
   slug: "ferrous-systems";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "head-in-the-clouds.md": {
 	id: "head-in-the-clouds.md";
   slug: "head-in-the-clouds";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "page": {
@@ -200,7 +200,7 @@ declare module 'astro:content' {
   slug: "author";
   body: string;
   collection: "page";
-  data: any
+  data: InferEntrySchema<"page">
 } & { render(): Render[".md"] };
 };
 "projects": {
@@ -209,49 +209,49 @@ declare module 'astro:content' {
   slug: "amixima";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "chemi-cli.md": {
 	id: "chemi-cli.md";
   slug: "chemi-cli";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "envelope.md": {
 	id: "envelope.md";
   slug: "envelope";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "filemanager.md": {
 	id: "filemanager.md";
   slug: "filemanager";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "petalblade.md": {
 	id: "petalblade.md";
   slug: "petalblade";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "soundry.md": {
 	id: "soundry.md";
   slug: "soundry";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "tapehead.md": {
 	id: "tapehead.md";
   slug: "tapehead";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 
@@ -263,5 +263,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
