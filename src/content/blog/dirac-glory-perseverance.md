@@ -8,7 +8,7 @@ tags: ["Physics", "Quantum Mechanics"]
 
 ### Paul Adrien Maurice Dirac, was one of the fathers of quantum mechanics, and mathematically, balanced upon a ”dizzying path between genius and madness”.
 
-#### This is Dirac, from the perspective of Einstein, in August of 1926, in a correspondence between him and another star of the field, Paul Ehrenfest, who linked quantum mechanics and statistical mechanics, as well as generated the theory of [phase transitions](https://en.wikipedia.org/wiki/Phase_transition).
+#### This is Dirac, from the perspective of Einstein, in August of 1926, in a correspondence between him and another star of the field, Paul Ehrenfest, who linked quantum mechanics and statistical mechanics, as well as generated the theory of [phase transitions](https://en.wikipedia.org/wiki/Phase_transition).
 
 Other contemporaries of his would also remark on his incredible reticence, often refusing to speak, or speaking sparsely when he did- Einstein was not the only one who would venture as far as labeling him mad for some of his peculiarities.
 
@@ -26,7 +26,7 @@ To round it out, we have Dirac's reliance on projective geometry, which he was i
 
 When we put all of this together, it certainly sounds like the making of one of the most accomplished scientists of the modern world, leaving not much surprise about the fact that the equation that bears his name, gained him a Nobel prize. He provided the relativistic equation of motion describing the wave function of the electron, and out from this fell a few astounding ideas: antimatter, positrons, and knowledge about quarks.
 
-*   Oh, he's also regarded as the father of Quantum Field Theory, and the mathematical notation he introduced, eponymously named, is ubiquitous in Physics and is integral to Quantum Computing.
+* Oh, he's also regarded as the father of Quantum Field Theory, and the mathematical notation he introduced, eponymously named, is ubiquitous in Physics and is integral to Quantum Computing.
     
 
 ### All of this taken into account, one could come to believe that the pathway for this gifted and well-trained individual to stardom was walked rather straightforwardly, however, that would be as far from the truth as Dirac was from being a loudmouth.
@@ -37,7 +37,7 @@ Dirac had something to prove (*Maynard Keynes himself recommended him for a rese
 
 #### While he did accomplish this, stunningly at that (his work is considered one of the greatest triumphs in theoretical physics- discovering anti-matter through pure reason), his first attempt was stymied, as was his second, third, and, well, allow me to explain.
 
-* * *
+---
 
 # Generalizing Heisenberg
 
@@ -57,7 +57,7 @@ During one of his meandering walks for which he was also known, he had the idea 
 
 Dirac soon realized that this question was rather similar to a mathematical structure, a Poisson bracket, which he remembered related to the Hamiltonian method of describing motion. The Hamiltonian, is a mathematical operator that describes the sum total of energies in a system, both kinetic and potential. He was confident that by using this construct to root out the answer to his question, he could bring some clarity to Heisenbergs theory, the presence of non-commutative properties in it, and relate this all to the expectation of classical physical theory- and he was correct. Upon researching the mathematical construct, he realized he could apply it to the theory, using quantities that **correspond** to classical numerical quantities, including an equation that I would like you to remember for later on in the article:
 
-> $qp - pq = \frac{ih}{2\pi}$
+> $$\Delta \times p - \Delta \times p = h \times \sqrt{\frac {-1} {2\; \times \pi}}$$
 
 This was an extreme departure from typical perspectives of these quantities, and what the equation presented: these everyday properties are now no longer representative of their real world corollaries, but rather entirely symbolic, abstract and mathematical in nature. The next step, for Dirac, however, was to make sure that his new mathematical conception still played by the rules of physics. He did this by showing that his theory had validity, by displaying that it obeyed the law of conservation of energy, and agreed with the recent work of Bohr, who had laid out the nature of atomic electrons, and how they pass between higher and lower energy levels, releasing a quantum of light in the process.
 
@@ -65,7 +65,7 @@ Dirac proceeded then to write a paper, entitled "The Fundamental Equations of Qu
 
 #### Dirac had been handed his first defeat in his attempts of theoretic achievement, having been narrowly beat to print by some of the best physicists of the day, working in tandem, Heisenberg, Pascual Jordan, and Max Born, in Göttingen- but he kept on, knowing that quantum theory was nascent, and that there was still plenty of opportunity for scientific glory.
 
-* * *
+---
 
 # Generalizing Schrödinger
 
@@ -81,7 +81,7 @@ Interestingly, at first Dirac was rather non-plussed by Schrödinger's theory, u
 
 #### Nonetheless, Dirac still struck out to make a name for himself, because the first version of Schrödinger's equation was only applicable to physical quantities that didn't change over time, providing Dirac an opportunity to generalize the equation, to deal with circumstances that fluctuated, such as the rotation of an atom under the influence of a magnetic field. Unfortunately, again, Dirac would be beat to this discovery, as \*\*Schrödinger also wrote down the same generalized equation \*\*(roughly 4 weeks after the first version), leaving him empty handed once again, having had a treasure unearthed from right below his nose.
 
-* * *
+---
 
 # Firmly, Fermi.
 
@@ -103,7 +103,7 @@ Having no doubt that the work he'd done was of a rare quality, and having been t
 
 That being said, today, the descriptions of groups of electrons are associated with Dirac, as well as Fermi, often referred to as Fermi-Dirac statistics, however this name was, at the time, not a thing at all, and thus, was probably heralded more as the work of Fermi. Another interesting anecdote about this is that Pascual Jordan is noted to have developed these same statistics independently a year earlier than Dirac, or Fermi, but the results weren't published in a timely manner, because his adviser at the time, Max Born, *left it at the bottom of one of his suitcases*, forgotten for a number of months, during which the year changed and the Fermi & Dirac papers were released.
 
-* * *
+---
 
 # Passed by Pascual, A Hint of Heisenberg
 
@@ -121,13 +121,14 @@ It was within this realization, that something extremely important became obviou
 
 This, in almost excruciatingly plain language, is a description of none other than the famed uncertainty principle (also referred to as the indeterminacy relation)- it's hard to imagine how much closer to claiming the discovery of this principle an individual could have gotten, without realizing it.
 
-> *This is also why I wanted you to remember that equation from earlier*: $\small qp - pq = \frac{ih}{2\pi}$, is just a painfully short jump from the uncertainty principle: $\Delta x \Delta p \ge \frac{\hbar}{2}$ .
+> *This is also why I wanted you to remember that equation from earlier*:$$\Delta \times p - \Delta \times p = h \times \sqrt{\frac {
+▍     -1} {2\; \times \pi}}$$ , is just a painfully short jump from the uncertainty principle: $\Delta x \Delta p \ge \frac{\hbar}{2}$ .
 
 Truly, Dirac was in high spirits as a result of this work, having been particularly pleased at solving the problem of showing the synthesis of the theories at play, especially given that it was the result of one of his favorite techniques for solving problems in quantum mechanics, by drawing out subtle and sneaky classical analogues to the quantum phenomenon. Having been a long time fan of Hamilton, he was quite aware of the ability of Transformation theory to relate disparate representations of the same event, and used this to advance the work of both Heisenberg and Schrödinger.
 
 #### To top it all off, not only in this process did the uncertainty principle sneak by him, but again, ***the process of printing stymied his claim to theoretical fame once more:*** Pascual Jordan, had solved the exact same problem, with the news reaching Dirac in the autumn of 1926, and while Dirac's paper probably contained the more elegant formation of the relationship between these two descriptions of quantum behavior, **he wasn't able to plant the first flag in that ground**. Dirac would **yet again**, have to suss out an opportunity to cement himself, though by this time, there was no shortage of top tier admirers of his ability, even if they didn't quite understand it, one such admirer was Einstein, and it was at this point in Dirac's career that Einstein uttered the quote about his balancing on a "dizzying path between genius and madness".
 
-* * *
+---
 
 # Tables turn, Electrons spin
 
@@ -155,7 +156,7 @@ In his dedication, and persistence, trying out equation after equation, Dirac hi
 
 #### On New Years day, 1928, Dirac, via Fowler, sent to the royal society, a paper entitled "The Quantum Theory of the Electron, clearing up some minor details a month later in a second paper. Dirac sent a communique to Born, only referencing the paper in post-script, who considered it 'an absolute wonder', who then showed it to his colleagues Jordan and Wigner, who were also working on the problem, absolutely blindsided that Dirac had found the solution on his own- a soloist endeavor with symphonic results. After many an attempt to procure for himself placement amongst the greats, he'd beaten all of his contemporaries to the treasure, and solved a master level problem in quantum theory.
 
-* * *
+---
 
 # Trouble in Paradise
 
@@ -203,7 +204,7 @@ All of this aside, Blackett and Ochiallini, were confident that they had spied D
 
 #### Blackett gave a speech about the rather sensationally named, cosmic rays, showing picture after picture to an insatiable public, mentioning that the contents of these agreed thoroughly with the predictions of hole theory. The ball was in the court of the physics community, with Rutherford and Bohr remaining suspicious, having not been convinced of the theory, and thus the subsequent prediction, however the fuel for this was drying up rapidly. However, by the end of 1933, there was no room for physicists to maneuver, and the community accepted the creation of positron-electron pairs, as a result of cosmic rays striking atomic nuclei, and by 1934, it was solidified, due to the increasing number of cloud chamber tracks that matched the original ones observed by Anderson: positrons had been detected in labs all over the world, roughly thirty *thousand*, in '34. Experimentalists had even gone on to create these particle pairs out of the vacuum in labs, no longer requiring cosmic rays, having found a way to bring about the same phenomena with radioactive materials.
 
-* * *
+---
 
 # Eyes on the Prize
 
@@ -213,4 +214,4 @@ There's something to be said, for me, about the fact that, despite being dealt a
 
 Having faltered certainly in his beliefs, ideas, and perspectives, at times, he never wavered in his focus, on his path forward into the unknown of science, aided by precision and reason, toward his eponymous equation.
 
-![direq.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1615066919191/1kgW_iD29.png align="left")
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1615066919191/1kgW_iD29.png" width="400">
