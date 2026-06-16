@@ -13,7 +13,7 @@ status: "in-progress"
 
 ## Motivation
 
-The project was sparked by a desire to look behind the opaque mystique of terminal shells and understand exactly how environment configurations propagate. The I built it to gain hands-on experience with the Ratatui ecosystem and to deeply study the architectural differences of the immediate-mode GUI pattern compared to traditional retained-mode application structures.
+The project was sparked by a desire to look behind the opaque mystique of terminal shells and understand exactly how environment configurations propagate. I built it to gain hands-on experience with the Ratatui ecosystem and to deeply study the architectural differences of the immediate-mode GUI pattern compared to traditional retained-mode application structures.
 
 ## Features
 
