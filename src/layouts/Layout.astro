@@ -22,24 +22,28 @@ const pages = await getCollection('page');
 	</head>
 	<body>
 		<header>
-			<nav>
-				<div class="nav-left">
-					<a href="/" class="logo">
-						<svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-							<circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
-							<path d="M12 20C12 25 16 28 20 28C24 28 28 25 28 20C28 15 24 12 20 12" stroke="currentColor" stroke-width="2"/>
-						</svg>
-						<h1>Lorenzo Evans</h1>
-					</a>
+			<div class="header-inner">
+				<nav>
+					<div class="nav-left">
+						<a href="/" class="logo">
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+								<path d="M12 20C12 25 16 28 20 28C24 28 28 25 28 20C28 15 24 12 20 12" stroke="currentColor" stroke-width="2"/>
+							</svg>
+							<h1>Lorenzo Evans</h1>
+						</a>
+					</div>
+					<div class="nav-right">
+						<a href="/projects" class="nav-link">Projects</a>
+						<a href="/tags" class="nav-link">Tags</a>
+						{pages.map(page => (
+							<a href={`/${page.slug}`} class="nav-link">{page.data.title}</a>
+						))}
+					</div>
+				</nav>
 				</div>
-				<div class="nav-right">
-					<a href="/projects" class="nav-link">Projects</a>
-					<a href="/tags" class="nav-link">Tags</a>
-					{pages.map(page => (
-						<a href={`/${page.slug}`} class="nav-link">{page.data.title}</a>
-					))}
-				</div>
-			</nav>
+				<div class="header-rule" aria-hidden="true"></div>
+			</div>
 		</header>
 		<slot />
 		<footer>
@@ -53,6 +57,7 @@ const pages = await getCollection('page');
 		--text-secondary: #4a4a4a;
 		--background: #f5f5f5;
 		--accent: #2d2d2d;
+		--page-gutter: clamp(1rem, 4vw, 2rem);
 	}
 	html {
 		font-family: system-ui, sans-serif;
@@ -61,7 +66,7 @@ const pages = await getCollection('page');
 		-webkit-text-size-adjust: 100%;
 		box-sizing: border-box;
 	}
-	*, *::before, *::after {
+	:global(*), :global(*::before), :global(*::after) {
 		box-sizing: inherit;
 	}
 	body {
@@ -70,11 +75,14 @@ const pages = await getCollection('page');
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		overflow-x: hidden;
+		overflow-x: clip;
 	}
 	header {
-		padding: clamp(1rem, 4vw, 2rem);
-		border-bottom: 1px solid var(--accent);
+		padding: var(--page-gutter) 0 0;
+	}
+	.header-inner {
+		width: min(1400px, calc(100% - var(--page-gutter) - var(--page-gutter)));
+		margin: 0 auto;
 	}
 	nav {
 		display: flex;
@@ -82,8 +90,6 @@ const pages = await getCollection('page');
 		justify-content: space-between;
 		flex-wrap: wrap;
 		row-gap: 0.75rem;
-		max-width: 1400px;
-		margin: 0 auto;
 		width: 100%;
 	}
 	.nav-left, .nav-right {
@@ -98,6 +104,9 @@ const pages = await getCollection('page');
 		gap: 1rem;
 		color: var(--text-primary);
 		text-decoration: none;
+	}
+	.logo svg {
+		flex: none;
 	}
 	.logo:hover {
 		opacity: 0.8;
@@ -116,6 +125,11 @@ const pages = await getCollection('page');
 	}
 	.nav-link:hover {
 		background-color: rgba(0, 0, 0, 0.05);
+	}
+	.header-rule {
+		height: 1px;
+		margin-top: var(--page-gutter);
+		background: var(--accent);
 	}
 	footer {
 		margin-top: auto;

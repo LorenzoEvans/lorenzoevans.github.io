@@ -27,10 +27,9 @@ const { Content } = await post.render();
 
 <style>
   .post {
-    width: 100%;
-    max-width: 800px;
+    width: min(800px, calc(100% - var(--page-gutter) - var(--page-gutter)));
     margin: 0 auto;
-    padding: clamp(1rem, 5vw, 2rem);
+    padding: clamp(1.25rem, 4vw, 2rem) 0;
   }
 
   .image-container {

@@ -27,14 +27,13 @@ projects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 <style>
 	main {
-		width: 100%;
-		padding: clamp(1rem, 4vw, 2rem);
-		max-width: 1400px;
+		width: min(1400px, calc(100% - var(--page-gutter) - var(--page-gutter)));
+		padding: clamp(1.25rem, 4vw, 2rem) 0;
 		margin: 0 auto;
 	}
 	h1 {
-		font-size: 2.5rem;
-		margin-bottom: 2rem;
+		font-size: clamp(1.8rem, 7vw, 2.5rem);
+		margin: 0 0 clamp(1.25rem, 4vw, 2rem);
 		color: var(--text-primary);
 	}
 	.projects-grid {
