@@ -40,7 +40,8 @@ const { items, tag } = Astro.props;
 
 <style>
 	main {
-		padding: 2rem;
+		width: 100%;
+		padding: clamp(1rem, 4vw, 2rem);
 		max-width: 1400px;
 		margin: 0 auto;
 	}
@@ -50,25 +51,10 @@ const { items, tag } = Astro.props;
 	}
 	.blog-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+		gap: clamp(1rem, 3vw, 2rem);
 	}
 	.card-link {
 		text-decoration: none;
-	}
-	@media (max-width: 1200px) {
-		.blog-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-	@media (max-width: 900px) {
-		.blog-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	@media (max-width: 600px) {
-		.blog-grid {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>

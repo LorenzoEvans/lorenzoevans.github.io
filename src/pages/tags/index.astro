@@ -29,7 +29,8 @@ const tagCounts = tags.reduce((acc, tag) => {
 
 <style>
 	main {
-		padding: 2rem;
+		width: 100%;
+		padding: clamp(1rem, 4vw, 2rem);
 		max-width: 1400px;
 		margin: 0 auto;
 	}
@@ -39,8 +40,8 @@ const tagCounts = tags.reduce((acc, tag) => {
 	}
 	.tags-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+		gap: clamp(1rem, 3vw, 2rem);
 	}
 	.tag {
 		display: flex;
@@ -63,20 +64,5 @@ const tagCounts = tags.reduce((acc, tag) => {
 		padding: 0.25rem 0.5rem;
 		border-radius: 999px;
 		font-size: 0.875rem;
-	}
-	@media (max-width: 1200px) {
-		.tags-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-	@media (max-width: 900px) {
-		.tags-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	@media (max-width: 600px) {
-		.tags-grid {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>
